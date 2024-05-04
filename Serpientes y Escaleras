@@ -1,0 +1,43 @@
+import random
+
+serpientes = {17:10,13:4}
+escaleras = {3:11,15:19}
+cantidades = []
+
+for i in range (0,100000):
+    x = 0
+    contador = 0
+    while x < 19:
+        contador += 1
+        dado = random.choice(["uno","dos","tres","cuatro","cinco","seis"])
+        if dado == "uno":
+            x += 1
+    
+        elif dado == "dos":
+            x += 2
+    
+        elif dado == "tres":
+            x += 3
+    
+        elif dado == "cuatro":
+            x += 4
+        
+        elif dado == "cinco":
+            x += 5
+    
+        elif dado == "seis":
+            x += 6
+        
+        if x in serpientes:
+            x = serpientes[x]
+        
+        elif x in escaleras:
+            x = escaleras[x]
+        
+        else:
+            x = x
+            
+    cantidades.append(contador)
+    
+media = sum(cantidades)/100000
+print ("La media de tiradas para ganar este juego es de: ", media)
