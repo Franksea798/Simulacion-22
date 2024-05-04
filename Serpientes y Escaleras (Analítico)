@@ -1,0 +1,34 @@
+Para la forma analitica primero se busca la media de los posibles resultados
+
+media = (1 + 2 + 3 + 4 + 5 + 6)/6 = 3.5 
+
+Esta media dividira la cantdad que es requerida para completar el juego de 20 casillas
+
+20 / 3.5 = 5.7
+
+Ahora debemos considerar los casos favorables y desfavorables en el juego que serian 
+los casos donde el resultado nos dio una serpiente o una escalera.
+
+Para la probabilidad de que caiga en la casilla 3 solo se toman encuanta tres casos, el 
+primero es cuando se hace la primera tirada el cual tiene una probabilidad de 1/6 y los otros
+dos seran la combinacion de los tiros 1,2 y 2,1 los cuales cuentan con una probabilidad de 1/36
+cada uno para que este sucedada:
+
+P(3) =1/6 + 1/36 + 1/36 = 2/9
+
+Los otros que se tomaran en cuanta es para la probabilidad de obtener 13 y 15 pero de estos solo
+agarraremos sus probabilidades mas proximas a cumplirse, para 13 seria la tirada 3,2 con probabilidad
+de 1/36 y para 15 seria la tirada 3,4 con probabilidad de 1/36. Para estos casos solo se toman las
+probabilidades mas proximas a cumplir, debido a que las siguientes toma valores inferiores a 
+4.62 x 10^-3 lo que lo hace un tanto imperseptible, es por eso que no se considera los casos donde
+las tiradas sumen 17 por que con el tiempo esta se vuelve apenas perceptible:
+
+P(3) = 2/9
+P(13) = 1/36
+P(15) = 1/36
+
+Para obtener el valor esperado del juego se sumara el valor esperado de solo 20 casillas y despues
+se le sumaran las probabilidades de forma correspondiente a la media, de forma favorable y desfavorable:
+
+E(X) = 5.7 + media * (P(3) - P(13) + P(15)) = 6.4777..
+
