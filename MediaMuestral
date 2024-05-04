@@ -1,0 +1,15 @@
+import random
+import math
+
+sumatoria = []
+
+for i in range (0,10000):
+    x = random.uniform(0,1)
+    
+    f = (math.exp(x) - 1)/(math.e - 1)
+    
+    sumatoria.append(f)
+    
+media = sum(sumatoria)/10000
+
+print("El valor de la integral en el intervalo (0,1) =", medi
